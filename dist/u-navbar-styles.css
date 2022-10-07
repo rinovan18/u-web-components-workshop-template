@@ -1,0 +1,103 @@
+u-navbar:not([expanded]) ul[role=menubar] {
+  margin: 0;
+  padding: 2px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+u-navbar:not([expanded]) ul[role=menubar] li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+u-navbar:not([expanded]) ul[role=menubar] > li {
+  display: block;
+  position: relative;
+  flex: 1 0 auto;
+}
+
+u-navbar:not([expanded]) ul[role=menubar] > li li {
+  display: block;
+}
+
+u-navbar:not([expanded]) ul[role=menubar] > li > [role="menuitem"] {
+  display: inline-block;
+  padding: 6px;
+}
+
+u-navbar:not([expanded]) ul[role=menubar] [role="separator"] {
+  padding: 3px 0;
+}
+
+u-navbar:not([expanded]) ul[role=menubar] [role="menu"] [role="menuitem"],
+u-navbar:not([expanded]) ul[role=menubar] [role="menu"] [role="separator"] {
+  display: block;
+  width: 12em;
+}
+
+u-navbar:not([expanded]) ul[role=menubar] [role="menu"] {
+  display: none;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+
+u-navbar:not([expanded]) ul[role=menubar] [role="group"] {
+  margin: 0;
+  padding: 0;
+}
+
+/* aria-current styling */
+
+u-navbar:not([expanded]) ul[role=menubar] > li > [role="menuitem"][aria-current],
+u-navbar:not([expanded]) ul[role=menubar] > li > [role="menuitem"].aria-current-path {
+}
+
+u-navbar:not([expanded]) ul[role=menubar] [role="menu"] [role="menuitem"].aria-current-path,
+u-navbar:not([expanded]) ul[role=menubar] [role="menu"] [role="menuitem"][aria-current] {
+}
+
+/* focus styling */
+
+u-navbar:not([expanded]) ul[role=menubar].focus {
+}
+
+u-navbar:not([expanded]) ul[role=menubar] > li > [aria-expanded="true"],
+u-navbar:not([expanded]) ul[role=menubar] > li > [role="menuitem"]:focus,
+u-navbar:not([expanded]) ul[role=menubar] > li > [role="menuitem"]:hover {
+}
+
+u-navbar:not([expanded]) ul[role=menubar] > li > [role="menuitem"]:focus,
+u-navbar:not([expanded]) ul[role=menubar] > li > [role="menuitem"]:hover {
+}
+
+u-navbar:not([expanded]) ul[role=menubar] > li > [role="menuitem"]:focus{
+}
+
+u-navbar:not([expanded]) ul[role=menubar] [role="menu"] [aria-expanded="true"],
+u-navbar:not([expanded]) ul[role=menubar] [role="menu"] [role="menuitem"]:focus,
+u-navbar:not([expanded]) ul[role=menubar] [role="menu"] [role="menuitem"]:hover {
+}
+
+u-navbar:not([expanded]) ul[role=menubar] [role="menu"] [role="menuitem"]:focus,
+u-navbar:not([expanded]) ul[role=menubar] [role="menu"] [role="menuitem"]:hover {
+}
+
+u-navbar:not([expanded]) ul[role=menubar] > li > [aria-expanded="true"].aria-current-path,
+u-navbar:not([expanded]) ul[role=menubar] > li > [role="menuitem"].aria-current-path:focus,
+u-navbar:not([expanded]) ul[role=menubar] > li > [role="menuitem"].aria-current-path:hover,
+u-navbar:not([expanded]) ul[role=menubar] > li > [role="menuitem"][aria-current]:focus,
+u-navbar:not([expanded]) ul[role=menubar] > li > [role="menuitem"][aria-current]:hover {
+}
+
+u-navbar:not([expanded]) ul[role=menubar] [role="menu"] [aria-expanded="true"].aria-current-path,
+u-navbar:not([expanded]) ul[role=menubar] [role="menu"] [role="menuitem"].aria-current-path:focus,
+u-navbar:not([expanded]) ul[role=menubar] [role="menu"] [role="menuitem"].aria-current-path:hover,
+u-navbar:not([expanded]) ul[role=menubar] [role="menu"] [role="menuitem"][aria-current]:focus,
+u-navbar:not([expanded]) ul[role=menubar] [role="menu"] [role="menuitem"][aria-current]:hover {
+}
+u-navbar:not([expanded]) a[role="menuitem"]:link {
+  text-decoration: none;
+}

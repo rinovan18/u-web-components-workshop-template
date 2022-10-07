@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap');
+@import url('/altoona/header.css');
+@import url('/altoona/explore-cards.css');
+@import url('/altoona/featured-stories.css');
+@import url('/altoona/latest-news.css');
+@import url('/altoona/footer.css');
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+}
+.visually-hidden {
+  position: absolute;
+  left: -9999999px;
+  width: 0;
+  height: 0;
+}
+@media (min-width: 800px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/****************************************************
+*****************************************************
+**
+**    u-card
+**
+*****************************************************
+****************************************************/
+u-card {
+  outline-color: transparent;
+  margin: 15px;
+}
+u-card,
+u-card::part(body) {
+  align-items: flex-start;
+  justify-content: space-between;
+}
+u-card::part(body) {
+  padding: 15px 0;
+}

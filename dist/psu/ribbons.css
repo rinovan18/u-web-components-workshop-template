@@ -1,0 +1,79 @@
+/****************************************************
+*****************************************************
+**
+**    ribbons
+**
+*****************************************************
+****************************************************/
+#ribbons {
+  padding: 0px 0px;
+}
+#ribbons > div {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#ribbons u-card {
+  width: 100%;
+  margin: 10% 0 15px;
+  color: white;
+}
+#ribbons u-card::part(body) {
+  background-image: url(https://www.psu.edu/components/img/banner.png);
+  width: 33.3333%;
+  margin-left: 5%;
+  margin-top: -5%;
+  padding: 10% 5% 15%;
+  height: 75%;
+  position: absolute;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 3vw;
+  align-items: flex-start;
+}
+#ribbons h2 {
+  font-size: 4vw;
+  margin-bottom: 0;
+}
+#ribbons u-card {
+  padding: 0 0 10%;
+}
+#ribbons u-card h2:after {
+  border-bottom: 3px solid #009cde;
+  width: 30%;
+  margin: 3vw 0;
+}
+#ribbons u-card a[slot='link'] {
+  margin-top: 0.75rem;
+  margin-bottom: 30%;
+  padding: 1.25vw 1.5vw;
+  border: 2px solid #fff;
+  color: #ccf0ff;
+}
+#ribbons u-card a[slot='link']:hover {
+  border: 2px solid #ccf0ff;
+  background-color: #ccf0ff;
+  color: #005fa9;
+}
+@media (min-width: 1000px) {
+  #ribbons > div {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+  #ribbons u-card {
+    width: calc(33.3333% - 30px);
+    margin: 10% 0 15px;
+  }
+  #ribbons u-card::part(body) {
+    font-size: 1vw;
+  }
+  #ribbons h2 {
+    font-size: 1.3333vw;
+  }
+  #ribbons u-card h2:after {
+    margin: 1.25vw 0;
+  }
+}

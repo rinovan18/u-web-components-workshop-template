@@ -1,0 +1,88 @@
+/****************************************************
+*****************************************************
+**
+**    info-groups
+**
+*****************************************************
+****************************************************/
+#info-groups > div {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#info-groups u-card {
+  width: 100%;
+  margin: 0 0 15px;
+  background-color: #001e44;
+}
+#info-groups u-card::part(body) {
+  height: 0;
+  padding: 0;
+  overflow: visible;
+}
+#info-groups u-card [slot='heading'] {
+  position: absolute;
+  top: 0.75em;
+  left: 1.5em;
+  background-color: #001e44;
+  color: white;
+  max-width: 95%;
+  padding: 9px 0 6px;
+  box-shadow: 10px 0 0 0 #001e44, -10px 0 0 0 #001e44;
+  font-size: 4vw;
+  font-weight: 700;
+  line-height: 150%;
+  transition: all 0.5 ease-in-out;
+}
+#info-groups u-card:focus-within [slot='heading'],
+#info-groups u-card:hover [slot='heading'] {
+  background-color: #0064bf;
+  box-shadow: 1rem 0 0 0 #0064bf, -1rem 0 0 0 #0064bf;
+}
+#info-groups u-card:focus-within [slot='image'],
+#info-groups u-card:hover [slot='image'] {
+  opacity: 0.25;
+  transition: all 0.5 ease-in-out;
+}
+#info-groups u-card [slot='link'] {
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2vw;
+  font-weight: 700;
+  line-height: 150%;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  right: 2.5em;
+  bottom: 1.5em;
+  text-decoration: none !important;
+  transition: all 0.5 ease-in-out;
+}
+#info-groups u-card a[slot='link']:after {
+  content: ' >';
+  margin-left: 0.25em;
+  position: static;
+}
+#info-groups u-card:focus-within a[slot='link'],
+#info-groups u-card:hover a[slot='link'] {
+  opacity: 1;
+}
+@media (min-width: 1000px) {
+  #info-groups > div {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+  #info-groups u-card [slot='heading'] {
+    font-size: 2vw;
+  }
+  #info-groups u-card [slot='link'] {
+    font-size: 1vw;
+  }
+  #info-groups u-card {
+    width: calc(33.3333% - 30px);
+    margin: 0 0 15px;
+  }
+}

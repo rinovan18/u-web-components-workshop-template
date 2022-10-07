@@ -1,0 +1,55 @@
+/****************************************************
+*****************************************************
+**
+**    latest-news
+**
+*****************************************************
+****************************************************/
+#latest-news > div {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#latest-news u-card {
+  flex: 0 0 100%;
+}
+#latest-news u-card a[slot='link']:after {
+  content: '';
+}
+#latest-news u-card::part(body) {
+  padding: 0 0 15px;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+#latest-news u-card [slot='subheading'] {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+#latest-news u-card a[slot='link'] {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  color: #005fa9;
+  text-decoration: none;
+  transition: all 0.5 ease-in-out;
+}
+#latest-news u-card:focus-within a[slot='link'],
+#latest-news u-card a[slot='link']:hover {
+  text-decoration: underline;
+}
+#latest-news u-card [slot='link'] h3 {
+  margin: 0;
+}
+@media (min-width: 600px) {
+  #latest-news u-card {
+    flex: 0 0 calc(50% - 30px);
+  }
+}
+@media (min-width: 1200px) {
+  #latest-news {
+    flex-wrap: nowrap;
+  }
+  #latest-news u-card {
+    flex: 0 0 calc(25% - 45px);
+  }
+}

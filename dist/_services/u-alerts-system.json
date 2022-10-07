@@ -1,0 +1,10 @@
+{
+  "altoona": {
+    "title": "COVID-19 Updates",
+    "message": "<p>For the latest from Penn State about the coronavirus outbreak and campus-specific information visit: <a href=\"https://altoona.psu.edu/covid\">https://altoona.psu.edu/covid</a>. The Penn State community is encouraged to take CDC-recommended health/safety precautions (<a href=\"https://bit.ly/Covid19-safety\">https://bit.ly/Covid19-safety</a>), contact their healthcare provider if they have questions or feel ill, and review information from state health authorities.</p>"
+  },
+  "psu": {
+    "title": "COVID-19 Updates",
+    "message": "<p>For the latest COVID-19 news and information, visit Penn State's <a href=\"https://virusinfo.psu.edu/?utm_source=banner&amp;utm_medium=psumain&amp;utm_campaign=virusinfo\">Coronavirus Information website</a>. Continue to follow <a href=\"https://bit.ly/Covid19-safety\">CDC-recommended health/safety precautions</a>, contact your healthcare provider if you have questions or feel ill, and review information from <a href=\"https://bit.ly/2UOGTg2\">state and national health authorities</a>.</p>"
+  }
+}

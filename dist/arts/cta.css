@@ -1,0 +1,73 @@
+/****************************************************
+*****************************************************
+**
+**    cta
+**
+*****************************************************
+****************************************************/
+#cta {
+  padding: 20px;
+}
+#cta u-card {
+  display: inline-block;
+  font-size: 3vw;
+}
+#cta u-card::part(image) {
+  overflow: hidden;
+  padding-top: 3vw;
+  padding-left: 4vw;
+  padding-bottom: 3vw;
+}
+#cta u-card::part(body) {
+  padding: 0;
+  bottom: 10vw;
+  position: absolute;
+  width: min-content;
+}
+#cta u-card [slot='heading'] {
+  background-color: #42b6e7;
+  color: white;
+  padding: 0.5em 0.5em;
+  font-weight: 300;
+  font-size: 200%;
+  margin: 0;
+  width: max-content;
+}
+#cta #performing [slot='heading'] {
+  background-color: #c02c55;
+}
+#cta #visual [slot='heading'] {
+  background-color: #9bcd06;
+}
+#cta u-card [slot='content'] {
+  margin: 0;
+  background-color: white;
+  padding: 1em;
+  width: max-content;
+  max-width: 80%;
+}
+#cta u-card a[slot='link'] {
+  align-self: flex-end;
+}
+@media (min-width: 1000px) {
+  #cta {
+    padding: 20px 0;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  #cta u-card {
+    width: 40%;
+    font-size: 1vw;
+    margin: 0 12%;
+  }
+  #cta u-card::part(body) {
+    bottom: 0;
+  }
+  #cta #visual {
+    margin: -8% -12%;
+    z-index: 2;
+  }
+  #cta #performing {
+    margin: 0 2% 0 18%;
+  }
+}

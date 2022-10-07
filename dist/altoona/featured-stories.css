@@ -1,0 +1,42 @@
+
+
+/****************************************************
+*****************************************************
+**
+**    featured-stories
+**
+*****************************************************
+****************************************************/
+#featured-stories {
+  background-color: #1e407c;
+  color: white;
+}
+#featured-stories > h2:first-child {
+  color: white;
+}
+#featured-stories > div {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#featured-stories u-card {
+  flex: 1 0 45%;
+}
+
+#featured-stories u-card::part(body) {
+  padding: 15px 0;
+}
+#featured-stories u-card a[slot='link'] {
+  padding: 5px 10px;
+  border: 2px solid #fff;
+  text-decoration: none;
+  color: white;
+  transition: all 0.5 ease-in-out;
+}
+#featured-stories u-card a[slot='link']:hover {
+  background: #ccf0ff;
+  border-color: #ccf0ff;
+  color: #005fa9;
+  text-decoration: none;
+}

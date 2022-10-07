@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap');
+@import url('/psu/header.css');
+@import url('/psu/hero.css');
+@import url('/psu/u-navbar.css');
+@import url('/psu/ribbons.css');
+@import url('/psu/latest-news.css');
+@import url('/psu/footer.css');
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  font-size: 12px;
+}
+/* TODO: SLIDES 87 & 93 */
+
+.visually-hidden {
+  position: absolute;
+  left: -9999999px;
+  width: 0;
+  height: 0;
+}
+h1 {
+  margin: 0;
+}
+h1:after,
+h2:after {
+  content: ' ';
+  border-bottom: 4px solid #009cde;
+  width: 60px;
+  display: block;
+  margin: 15px 0;
+}
+u-card a[slot='link'] {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 400;
+  font-style: italic;
+}
+u-card a[slot='link']:after {
+  content: ' >';
+  margin-left: 0.25em;
+}
+@media (min-width: 800px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/****************************************************
+*****************************************************
+**
+**    main-content
+**
+*****************************************************
+****************************************************/
+section {
+  padding: 0px 20px;
+}
+section > h2:first-child {
+  text-transform: uppercase;
+  margin: 0 0 40px;
+}
+section > h2:first-child:after {
+  content: ' //';
+  border-bottom: none;
+  display: inline;
+}
+/* TODO: SLIDE 103 */

@@ -1,0 +1,58 @@
+/****************************************************
+*****************************************************
+**
+**    header
+**
+*****************************************************
+****************************************************/
+header {
+  background-color: #f2f3f9;
+  color: #001e44;
+  padding: 30px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: 1rem;
+  line-height: 24px;
+  flex-wrap: wrap;
+}
+
+header > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 2px;
+  list-style: none;
+}
+
+header > ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header > ul li:not(:last-child) {
+  display: none;
+}
+header > ul li a {
+  padding: 8px;
+  color: #001e44;
+  text-decoration: none;
+}
+u-mark {
+  min-width: 150px;
+}
+u-search {
+  color: #001e44;
+  margin: 0;
+  /* TODO: SLIDE 99 */
+}
+u-search[toggled] {
+  color: #666;
+}
+@media (min-width: 40em) {
+  header > ul li:not(:last-child) {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,100 @@
+/****************************************************
+*****************************************************
+**
+**    header
+**
+*****************************************************
+****************************************************/
+header {
+  padding: 20px 40px;
+  color: white;
+  background-color: #001e44;
+  background-image: linear-gradient(
+    to right,
+    #009cde 0%,
+    #1e407c 33%,
+    #1e407c 67%,
+    #001e44 100%
+  );
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+header a {
+  color: white;
+}
+
+#menu-button,
+header > div {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+#menu-button {
+  background: none;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+#menu-button:hover {
+  opacity: 0.8;
+}
+#menu-button svg {
+  width: 24px;
+  height: 24px;
+  padding: 8px;
+  fill: white;
+}
+u-search {
+  background-color: rgba(255, 255, 255, 0.7);
+  --icon-color: black;
+  border: none;
+  border-radius: 20px;
+}
+u-search:not(toggled):focus,
+u-search:not(toggled):hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+u-search[toggled] {
+  color: #666;
+  background-color: white;
+  --icon-color: #005fa9;
+  border: none;
+  min-width: 8em;
+}
+#header-buttons {
+  flex: 0 0 100%;
+  justify-content: center;
+}
+#header-buttons > a {
+  display: block;
+  padding: 5px 10px;
+  margin: 5px;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0.025rem;
+  text-decoration: none;
+  color: white;
+  background: #1b5c99;
+  background: linear-gradient(to bottom, #009cde 1%, #1b5c99 66%, #1e407c 100%);
+  border: 2px solid #1e407c;
+}
+#header-buttons > a:hover {
+  background: transparent;
+  color: #ccf0ff;
+  border-color: #ccf0ff;
+}
+#header-buttons > a[href='#hotline'] {
+  background: #000321;
+  border-color: #000321;
+}
+#header-buttons > a[href='#hotline']:hover {
+  background: #ffd100;
+  color: #001e44;
+  border-color: #ffd100;
+}

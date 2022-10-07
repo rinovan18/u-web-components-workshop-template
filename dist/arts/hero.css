@@ -1,0 +1,53 @@
+
+/****************************************************
+*****************************************************
+**
+**    hero
+**
+*****************************************************
+****************************************************/
+#hero {
+  background-image: url(//arts.psu.edu//wp-content/uploads/2019/09/Header-Graphic-Pattern.png);
+  background-size: cover;
+  background-color: #F2F3F4;
+  padding: 0px 70px;
+  overflow: visible;
+}
+#hero:after {
+  content: ' ';
+  height: calc(10% + 40px);
+  width: 100%;;
+}
+h1 {
+  padding: 0px 70px;
+  font-size: 8vw;
+  font-weight: 100;
+  letter-spacing: -.05em;
+  margin-bottom: 0;
+}
+#hero video {
+  width: 100%;
+  margin-bottom: -10%;
+}
+#hero .subheading {
+  font-size: 3vw;
+  font-weight: 800;
+  letter-spacing: -.05em;
+  color: #001e44;
+  line-height: .95;
+}
+#hero a {
+  display: inline-block;
+  margin-bottom: 5%;
+}
+@media (min-width: 600px) {
+  #hero {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+  #hero h1 {
+    grid-row: 1;
+    grid-column: 1 / 3;
+  }
+}

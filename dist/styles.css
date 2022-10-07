@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+}
+#selector {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #15181e;
+  color: white;
+  line-height: 2em;
+  padding: 10px;
+  max-height: 4em;
+}
+body > div:last-child {
+  margin-bottom: 5em;
+}
+#siteurls a {
+  display: none;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+.site {
+  width: 100%;
+  display: none;
+}
+body.all .site {
+  width: 50%;
+  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 8px;
+}
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+iframe {
+  aspect-ratio: 1 / 2;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+body.psu #siteurls a[aria-describedby='psu'],
+body.altoona #siteurls a[aria-describedby='altoona'],
+body.arts #siteurls a[aria-describedby='arts'],
+body.wc #siteurls a[aria-describedby='wc'] {
+  display: inline;
+}
+
+body.all .site,
+body.psu .psu.site,
+body.altoona .altoona.site,
+body.arts .arts.site,
+body.wc .wc.site {
+  display: block;
+}

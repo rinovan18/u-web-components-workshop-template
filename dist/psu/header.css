@@ -1,0 +1,126 @@
+/****************************************************
+*****************************************************
+**
+**    header
+**
+*****************************************************
+****************************************************/
+header {
+  color: white;
+  width: 100%;
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  /* Created with https://www.css-gradient.com */
+  background: rgba(0, 31, 68, 0.7);
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 31, 68, 0.9) 30%,
+    rgba(0, 31, 68, 0.8) 60%,
+    rgba(0, 31, 68, 0.6),
+    rgba(0, 31, 68, 0) 100%
+  );
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 31, 68, 1) 30%,
+    rgba(0, 31, 68, 0.8) 60%,
+    rgba(0, 31, 68, 0.6),
+    rgba(0, 31, 68, 0) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 31, 68, 0.9) 30%,
+    rgba(0, 31, 68, 0.8) 60%,
+    rgba(0, 31, 68, 0.6),
+    rgba(0, 31, 68, 0) 100%
+  );
+  /*background-color: #001e44;*/
+}
+header > div {
+  background: 0 0;
+  -webkit-filter: none;
+  filter: none;
+  padding: 20px 20px 30px;
+}
+.header-inner {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+u-mark {
+  min-width: 150px;
+  flex: 0 0 auto;
+}
+
+#menu-button,
+.header-inner > div {
+  display: flex;
+  align-items: center;
+  flex: 1 0 auto;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+.header-inner div > a {
+  display: none;
+  padding: 5px 10px;
+  margin: 5px;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0.025rem;
+  color: #ccf0ff;
+  text-decoration: none;
+  border: 2px solid #ccf0ff;
+}
+.header-inner div > a:hover {
+  color: white;
+  background: #1b5c99;
+  background: linear-gradient(to bottom, #009cde 1%, #1b5c99 66%, #1e407c 100%);
+  border-color: #1e407c;
+}
+.header-inner div > a[href='#hotline'] {
+  background-color: #000321;
+  border-color: #000321;
+}
+.header-inner div > a[href='#hotline']:hover {
+  background: #ffd100;
+  color: #001e44;
+  border-color: #ffd100;
+}
+#menu-button {
+  background: none;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  flex: 0 0 auto;
+}
+#menu-button:hover {
+  opacity: 0.8;
+}
+#menu-button svg {
+  width: 24px;
+  height: 24px;
+  padding: 8px;
+  fill: white;
+}
+u-search {
+  color: white;
+  border: none;
+  border-radius: 20px;
+  flex: 0 0 auto;
+}
+u-search[toggled] {
+  color: #666;
+  background-color: white;
+  --icon-color: #005fa9;
+  border: none;
+  min-width: 13em;
+}
+@media (min-width: 40em) {
+  .header-inner div > a {
+    display: block;
+  }
+}
