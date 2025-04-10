@@ -38,14 +38,35 @@ class UMark extends LitElement {
         @media (min-width: 400px) {
           width: 250px;
         }
+
     `,
     ];
   }
 
   static get properties() {
     return {
-      /* TODO: SLIDE 71 */
-      /* TODO: SLIDE 72 */
+      /* TODO: SLIDE 71 
+      * is mark grayscale
+      */
+
+      grayscale: {
+        type: Boolean,
+        attribute: 'grayscale',
+      },
+      /* TODO: SLIDE 72 
+      * is mark inverted to white text
+      */
+      invert: {
+        type: Boolean,
+        attribute: 'invert',
+      },
+      /*
+      * campus location
+      */
+     location: {
+      type: String,
+      attribute: 'location',
+     }
     };
   }
 
@@ -111,21 +132,32 @@ class UMark extends LitElement {
               fill:#96bee6;
             }
             /* TODO: SLIDE 74 */
+            .grayscale.text,
+            .grayscale.shield-darkest {
+              fill:#231f20;
+            }
+            .grayscale.shield.shadow {
+              fill:#a7a9ac;
+            }
+
+            .text.invert{
+              fill:#fff;
+            }
           </style>
         </defs>
         <!-- TODO: SLIDE 73.1 -->
         <path 
-          class="shield-lightest" 
+          class="shield-lightest${this.grayscale ? 'grayscale' : ''}" 
           d="${uMarkPaths.light}"/>
         <path 
-          class="shield-darkest" 
+          class="shield-darkest${this.grayscale ? 'grayscale' : ''}" 
           d="${uMarkPaths.dark}"/>
         <path 
-          class="shield-shadow" 
+          class="shield-shadow${this.grayscale ? 'grayscale' : ''}" 
           d="${uMarkPaths.shadow}"/>
         <!-- TODO: SLIDE 73.2 -->
         <path 
-          class="text" 
+          class="text${this.grayscale ? ' grayscale' : ''}${this.invert ? ' invert' : ''}" 
           d="${this.svgData?.path}"/>
         </svg>
       `;

@@ -117,14 +117,18 @@ class uCard extends LitElement {
    */
   render() {
     return html`
-        <div part="image">
+        <slot name="image">
           <!-- TODO: SLIDE 63.1 -->
-        </div>
+  </slot>
         <div part="body">
           <!-- TODO: SLIDES 61 & 63.2 -->
-          <h1>Card Heading</h1>
+           <slot name="heading"></slot>
+           <slot name="subheading"></slot>
+           <slot name="content"></slot>
+           <slot name="link"></slot>
+          <!-- <h1>Card Heading</h1>
           <p>Card content.</p>
-          <a href="#">Card Link</a>
+          <a href="#">Card Link</a> -->
         </div>
     `;
   }

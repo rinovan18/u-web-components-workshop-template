@@ -31,7 +31,58 @@ class UFooter extends LitElement {
     return [
       css`
         /* TODO: SLIDE 52 */
-      `,
+      :host {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  container-name: host;
+}
+
+[hidden] {
+    display: none!important;
+}
+:host([invert]),
+:host([invert]) a {
+  color: white;
+}
+ul {
+  margin: 40px auto 20px;
+  list-style-type: none;
+  position: relative;
+  padding: 0;
+}
+li {
+  display: block;
+}
+u-mark {
+  width: 100px;
+  flex: 0 0 auto;
+}
+@media (min-width:800px) {
+  :host { 
+    flex-wrap: nowrap;
+  }
+  u-mark {
+    width: 120px;
+    flex: 0 0 auto;
+  }
+  ul {
+    text-align: center;
+  }
+  li {
+    display: inline-block;
+    line-height: 1.25;
+    padding: 0 1em;
+    margin-bottom: 1em;
+    border-left: 1px solid #888;
+  }
+  li:first-child {
+    border-left: none;
+  }
+}
+      
+        `,
     ];
   }
 
@@ -51,6 +102,22 @@ class UFooter extends LitElement {
       <!-- TODO: SLIDE 111 -->
       <ul>
         <!-- TODO: SLIDE 51 -->
+         <li>
+
+           <a href="#privacy-statement">Privacy</a>
+         </li>
+         <li>
+          <a href="#ad85">Non-discrimaniton</a>
+         </li>
+         <li>
+          <a href="#hr11">Equal Opportunity</a>
+        </li>
+        <li>
+          <a href="#accessibility-statement">Accessibility</a>
+        </li>
+        <li>
+          <a href="#copyright-information" >Copyright</a>
+        </li>
       </ul>`;
   }
 
